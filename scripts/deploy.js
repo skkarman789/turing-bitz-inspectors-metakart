@@ -1,4 +1,4 @@
-import hardhat from "hardhat";
+const hardhat =require("hardhat")
 
 async function main() {
     try {
