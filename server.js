@@ -8,7 +8,7 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
 
-//configure env
+//env
 dotenv.config();
 
 //database config
