@@ -8,6 +8,8 @@ import moment from "moment";
 import { Select } from "antd";
 const { Option } = Select;
 
+
+
 const AdminOrders = () => {
   const [status, setStatus] = useState([
     "Not Process",
@@ -96,13 +98,13 @@ const AdminOrders = () => {
                           className="card-img-top"
                           alt={p.name}
                           width="100px"
-                          height={"100px"}
+                          height="100px"
                         />
                       </div>
                       <div className="col-md-8">
                         <p>{p.name}</p>
                         <p>{p.description.substring(0, 30)}</p>
-                        <p>Price : {p.price}</p>
+                        <p>Price : ₹{p.price}</p>
                       </div>
                     </div>
                   ))}

@@ -4,6 +4,16 @@ import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
 import { useAuth } from "../../context/auth";
 import moment from "moment";
+import "../../styles/ProductDetailsStyles.css";
+import {Instagram} from '@mui/icons-material';
+import {Facebook} from '@mui/icons-material';
+import {Twitter} from '@mui/icons-material';
+import {Box, styled} from '@mui/material';
+
+// const Icons = styled(Box)`
+//   margin-left=100px;
+
+// `
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -22,7 +32,7 @@ const Orders = () => {
   }, [auth?.token]);
   return (
     <Layout title={"Your Orders"}>
-      <div className="container-flui p-3 m-3 dashboard">
+      <div className="container-flui p-3 m-5 l-6 dashboard">
         <div className="row">
           <div className="col-md-3">
             <UserMenu />
@@ -62,14 +72,21 @@ const Orders = () => {
                             src={`/api/v1/product/product-photo/${p._id}`}
                             className="card-img-top"
                             alt={p.name}
-                            width="100px"
-                            height={"100px"}
+                            width="50px"
+                            // height="auto" 
                           />
                         </div>
                         <div className="col-md-8">
                           <p>{p.name}</p>
                           <p>{p.description.substring(0, 30)}</p>
-                          <p>Price : {p.price}</p>
+                          <p>Price : ₹{p.price}</p>
+                          <Box style={{margin:'20%'}}>
+                            <Instagram/>
+                            <Facebook/>
+                            <Twitter/>
+
+                          </Box>
+
                         </div>
                       </div>
                     ))}

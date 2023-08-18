@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 import SearchInput from "../Form/SearchInput";
 import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
+
+import logo from '../../assets/logo.png';
 import { Badge } from "antd";
 
 const Header = () => {
