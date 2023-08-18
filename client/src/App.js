@@ -25,6 +25,7 @@ import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/Admin/AdminOrders";
 import FlipCoin from "./pages/FlipCoin";
+import AdminSocialMedia from "./pages/Admin/AdminSocialMedia"
 function App() {
   return (
     <>
@@ -49,6 +50,7 @@ function App() {
           <Route path="admin/products" element={<Products />} />
           <Route path="admin/users" element={<Users />} />
           <Route path="admin/orders" element={<AdminOrders />} />
+          <Route path="admin/social-media" element={<AdminSocialMedia />} />
         </Route>
         <Route path="/register" element={<Register />} />
         
