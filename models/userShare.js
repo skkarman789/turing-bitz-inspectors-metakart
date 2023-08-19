@@ -14,6 +14,6 @@ const shareSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const userShare = mongoose.model('Share', shareSchema);
+const userShare = mongoose.model('userShare', shareSchema);
 
 export default userShare;

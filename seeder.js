@@ -1,8 +1,9 @@
+import dotenv from 'dotenv';
 import userData from './data/userData.js';
 import userShare from './models/userShare.js';
 import connectDB from './config/db.js';
-import dotenv from 'dotenv';
 
+// require('dotenv').config();
 dotenv.config();
 connectDB();
 
