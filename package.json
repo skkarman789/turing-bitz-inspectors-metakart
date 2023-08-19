@@ -19,6 +19,7 @@
     "@nomicfoundation/hardhat-toolbox": "^3.0.0",
     "@openzeppelin/contracts": "^4.9.3",
     "@sendgrid/mail": "^7.7.0",
+    "axios": "^0.26.1",
     "bcrypt": "^5.1.1",
     "braintree": "^3.16.0",
     "colors": "^1.4.0",
