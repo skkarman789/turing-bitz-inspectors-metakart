@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const shareSchema = new mongoose.Schema(
   {
@@ -14,6 +14,6 @@ const shareSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Share = mongoose.model("Share", shareSchema);
+const userShare = mongoose.model('Share', shareSchema);
 
-export default Share;
+export default userShare;
