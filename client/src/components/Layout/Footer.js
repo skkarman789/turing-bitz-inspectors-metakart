@@ -33,12 +33,14 @@ const Footer = () => {
                   
           
           <div class="col-lg-4">
-              <h2>Locate us</h2>
-              <p id="locate-p"> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
+              <h2>Locate Us</h2>
+              {/* <p id="locate-p"> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
                   Eius cupiditate cum assumenda corporis <br/>
                     aspernatur vel voluptate odio nulla reiciendis? <br/>
                   Facere ipsam dolor iure modi. Tempore laboriosam<br/>
-                  eius, dolorum quod id modi rerum!</p>
+                  eius, dolorum quod id modi rerum!</p> */}
+
+                  
           </div>
           <div id="profile-m" className="col-lg-4">
               <h2 id="profile">Profile</h2>

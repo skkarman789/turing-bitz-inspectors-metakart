@@ -32,6 +32,7 @@ const Image = styled('img')({
 
 const Container = styled(Box)`
     display: flex;
+    margin-top: 3%;
    
 `;
 
