@@ -2,11 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Footer.css"
 import Logo from "../../assets/MetaKart.png"
-import Email from "../../assets/email.png"
-import GitHub from "../../assets/github.png"
-import Instagram from "../../assets/instagram.png"
-import LinkedIn from "../../assets/linkedin.png"
-import Twitter from "../../assets/twitter.png"
 
 import { RiGithubFill, RiLinkedinBoxFill, RiInstagramLine, RiTwitterLine, RiFacebookBoxFill, RiUserLine, RiPaypalLine, RiHome2Line, RiMapPinLine} from 'react-icons/ri';
 
@@ -28,7 +23,7 @@ const Footer = () => {
                   <a href="#"><img src={LinkedIn} style={{ width:'50%', height: '100%'}} /></a>
                   <a href="#"><img src={Twitter} style={{ width:'70%', height: '100%'}} /></a> */}
 
-                  <a href="#"><RiGithubFill className="logo" style={{ fontSize: '5.65vmin' }} /></a>
+                  <a href="#"><RiGithubFill className="logo" style={{ fontSize: '5.65vmin'}} /></a>
                   <a href="#"><RiLinkedinBoxFill className="logo" style={{ fontSize: '5.65vmin' }} /></a>
                   <a href="#"><RiInstagramLine className="logo" style={{ fontSize: '5.65vmin' }} /></a>
                   <a href="#"><RiTwitterLine className="logo" style={{ fontSize: '5.65vmin' }} /></a>

@@ -2,6 +2,8 @@ import React from "react";
 import { useSearch } from "../../context/search";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./styles/styles.css";
+
 const SearchInput = () => {
   const [values, setValues] = useSearch();
   const navigate = useNavigate();
@@ -26,7 +28,8 @@ const SearchInput = () => {
         onSubmit={handleSubmit}
       >
         <input
-          className="form-control me-2"
+          id="input-css"
+          className="form-control"
           type="search"
           placeholder="Search"
           aria-label="Search"
