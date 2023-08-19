@@ -23,14 +23,15 @@ const Products = () => {
     getAllProducts();
   }, []);
   return (
-    <Layout>
-      <div className="row dashboard">
+    <Layout >
+      <div  className="container-fluid m-3 p-3 dashboard">
+      <div className="row ">
         <div className="col-md-3">
           <AdminMenu />
         </div>
-        <div className="col-md-9 ">
-          <h1 className="text-center">All Products List</h1>
-          <div className="d-flex flex-wrap">
+        <div  className="col-md-9 ">
+          <h1 id="products-h1" >All Products List</h1>
+          <div id="products-layout" className="d-flex flex-wrap">
             {products?.map((p) => (
               <Link
                 key={p._id}
@@ -52,6 +53,7 @@ const Products = () => {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </Layout>
   );
