@@ -25,7 +25,7 @@ const Header = () => {
   };
   return (
     <>
-      <nav style={{height: 80, alignContent:'center', paddingTop: 20}} id="navbar" className="navbar navbar-expand-lg  bg-custom-color fixed-top">
+      <nav style={{height: 80, alignContent:'center', paddingTop: 15}} id="navbar" className="navbar navbar-expand-lg  bg-custom-color fixed-top">
         <div className="container-fluid">
           <button
             className="navbar-toggler"

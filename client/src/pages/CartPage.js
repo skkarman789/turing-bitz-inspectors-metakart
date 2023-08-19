@@ -8,7 +8,7 @@ import { AiFillWarning } from "react-icons/ai";
 import axios from "axios";
 import toast from "react-hot-toast";
 import "../styles/CartStyles.css";
-
+import FlipCoin1 from "../assets/flipCoin1.png";
 const CartPage = () => {
   const [auth, setAuth] = useAuth();
   const [cart, setCart] = useCart();
@@ -79,10 +79,10 @@ const CartPage = () => {
   };
   return (
     <Layout>
-      <div className=" cart-page" /**style={{backgroundColor: '#d8f9ff'}}**/>
-        <div className="row">
-          <div className="col-md-12" >
-            <h1 className="text-center bg-light p-2 mb-1">
+      <div className=" cart-page">
+        <div  className="row">
+          <div id="cart-banner" className="col-md-12" >
+            <h1 id="cart-hello" className="text-center bg-light p-2 mb-1">
               {!auth?.user
                 ? "Hello Guest"
                 : `Hello  ${auth?.token && auth?.user?.name}`}
@@ -96,12 +96,12 @@ const CartPage = () => {
             </h1>
           </div>
         </div>
-        <div className="container ">
-          <div className="row ">
-            <div className="col-md-7  p-3 m-0">
+        <div  className="container ">
+          <div  className="row ">
+            <div  id="cart-main" className="col-md-7  p-3 m-0">
               {cart?.map((p) => (
-                <div className="row card flex-row " key={p._id}>
-                  <div className="col-md-3">
+                <div id="cart-main-child" className="row " key={p._id} >
+                  <div  id="cart-main-childs" className="col-md-3" >
                     <img
                       src={`/api/v1/product/product-photo/${p._id}`}
                       className="card-img-top"
@@ -110,11 +110,11 @@ const CartPage = () => {
                       height={"130px"}
                     />
                   </div>
-                  <div className="col-md-7">
-                    <p><b>Product Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;:</b> &nbsp;{p.name}</p>
-                    <p><b>Product Description &nbsp;:&nbsp;&nbsp;</b>{p.description}</p>
+                  <div className="col-md-7 mt-4">
+                    <p><b>Product Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;:</b> &nbsp;  &nbsp;&nbsp; {p.name}</p>
+                    <p><b id="product-d">Product Description &nbsp;:&nbsp;&nbsp;</b><div id="product-d-layout">{p.description}</div></p>
                     
-                    <p><b>Price &nbsp;:</b> &nbsp;₹{p.price}</p>
+                    <p><b>Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b>        &nbsp;  &nbsp;&nbsp;₹{p.price}</p>
                   </div>
                   <div className="col-md-4 cart-remove-btn">
                     <button
@@ -124,10 +124,17 @@ const CartPage = () => {
                       Remove
                     </button>
                   </div>
+                  <p>     </p>
                 </div>
+               
               ))}
             </div>
-            <div className="col-md-5 cart-summary ">
+            {/* <div style={{backgroundColor: "#279EFF"}}>
+                <img id="cart-crypto-img" src={FlipCoin1}></img>
+              </div> */}
+              
+            <div id="cart-summary-div" className="col-md-5  cart-summary ">
+            
               <h2>Cart Summary</h2>
               <p>Total | Checkout | Payment</p>
               <hr />
@@ -137,12 +144,8 @@ const CartPage = () => {
                   <div className="mb-3">
                     <h4>Current Address :&nbsp;{auth?.user?.address}</h4>
                     <h5></h5>
-                    <button
-                      className="btn btn-outline-warning"
-                      onClick={() => navigate("/dashboard/user/profile")}
-                    >
-                      Update Address
-                    </button>
+                    <button className="btn btn-outline-warning">Apply FlipCoin</button>
+                  
                   </div>
                 </>
               ) : (
@@ -163,7 +166,7 @@ const CartPage = () => {
                         })
                       }
                     >
-                      Plase Login to checkout
+                      Please Login to checkout
                     </button>
                   )}
                 </div>
@@ -182,8 +185,14 @@ const CartPage = () => {
                       }}
                       onInstance={(instance) => setInstance(instance)}
                     />
+                      <button id="cart-update"
+                      className="btn btn-outline-warning"
+                      onClick={() => navigate("/dashboard/user/profile")}
+                    >
+                      Update Address
+                    </button>
 
-                    <button
+                    <button  id="cart-b"
                       className="btn btn-primary"
                       onClick={handlePayment}
                       disabled={loading || !instance || !auth?.user?.address}
@@ -193,7 +202,9 @@ const CartPage = () => {
                   </>
                 )}
               </div>
+              
             </div>
+            
           </div>
         </div>
       </div>

@@ -41,12 +41,12 @@ const ProductDetails = () => {
     <Layout>
       <div className="row container product-details">
         <div className="col-md-6">
-          <img
+          <img id="products-d"
             src={`/api/v1/product/product-photo/${product._id}`}
             className="card-img-top"
             alt={product.name}
 
-            width={"6%"}
+            
           />
         </div>
         <div id="product-details" className="col-md-6">

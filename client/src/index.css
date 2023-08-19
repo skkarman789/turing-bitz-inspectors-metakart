@@ -31,7 +31,7 @@
 }
 
 #reg-btn{
-  margin-left: 15vmin;
+  margin-left: 5vmin;
 }
 #logo{
   width: 10vmin;
@@ -48,7 +48,7 @@
   color: white; /* Your desired hover color here */
 }
 .nav-link {
-  font-weight: 300 !important;
+  font-weight: 600;
   color: #DBAD7E;
   
 }
@@ -177,6 +177,7 @@
 #product-h{
   margin-left: 40vmin;
   margin-top: 5vmin;
+
 }
 .span-bold{
   font-weight: 800;
@@ -201,4 +202,155 @@ line-height: 59px; /* 163.889% */
 }
 .product-t{
   font-weight: 800;
+}
+
+/* Admin Orders */
+
+#order-h{
+  margin-top: -10%;
+}
+
+#products-h1{
+  margin-left: 36%;
+
+}
+
+/* cart */
+
+#cart-b{
+  margin-bottom: 2vmin;
+}
+
+#cart-banner{
+  padding-top: 2vmin;
+  background-color: #DBAD7E ;
+}
+
+#cart-update{
+  margin-bottom: 2vmin;
+ margin-right: 2vmin;
+}
+
+#cart-main{
+  margin-bottom: 13vmin;
+
+}
+
+#cart-main-child{
+  width: 60%;
+  height: 25vmin;
+  margin-bottom: 2vmin;
+  border-radius: 1.5%;
+}
+#cart-summary-div{
+  box-sizing: border-box;
+  background-color: #807edb;
+  width: 50vmin;
+  height: 60vmin;
+  border-radius: 3vmin;
+  margin-left: 12vmin;
+  margin-top: 2vmin;
+  margin-bottom: 4vmin;
+}
+
+#cart-crypto-img{
+  width: 40vmin;
+ 
+}
+
+#cart-summary-div h2{
+  
+  text-transform: uppercase;
+  
+}
+#cart-summary-div p{
+  margin-top: -4%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.5vmin;
+  
+  
+}
+
+#cart-main-child{
+  height: 40vmin;
+  border: 2px solid black;
+  width:100vmin;
+  
+}
+
+#cart-main-childs{
+  margin-top: 6vmin;
+}
+#cart-main-childs2{
+  margin-top: 200vmin;
+}
+
+#product-d-layout{
+  margin-left: 25vmin;
+margin-top:-3.2vmin;
+text-align: justify;
+}
+#cart-hello{
+  color: #000;
+}
+#products-layout{
+  margin-left: 12vmin;
+}
+/* homepage-banner */
+
+#banner{
+  margin-top: 5%;
+  
+  box-shadow: 110px 2px lightgray;
+}
+
+#admin-image{
+  width: 20vmin;
+  justify-content: center;
+  margin-left: 20vmin;
+  z-index: 99;
+}
+
+#admin-info{
+  margin-left: 20vmin;
+  border-radius: 5%;
+  width: 60vmin;
+  z-index: 99;
+}
+
+#admin-box{
+  width: 60vmin;
+  height: 40vmin;
+  position: absolute;
+top:25vmin;
+left: 90vmin;
+
+  background-color: rgb(166, 255, 0);
+}
+
+#admin-info p{
+  margin-left: 22vmin;
+  text-transform: uppercase;
+  font-size: 3.5vmin;
+  font-weight: 700;
+  letter-spacing: 1vmin;
+  
+}
+#admin-info h3{
+  font-size: 3vmin;
+  border: 1px black;
+}
+.product-info{
+  margin-top: 20vmin;
+  width: 50vmin;
+  margin-left: 20vmin;
+  
+}
+
+.span-bold{
+  font-size: 2.5vmin;
+}
+#products-d{
+  width: 40vmin;
 }
