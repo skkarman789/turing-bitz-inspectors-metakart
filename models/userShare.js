@@ -6,7 +6,7 @@ const shareSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    address: {
+    chainAddress: {
       type: String,
       required: true,
     },
