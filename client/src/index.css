@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
@@ -11,17 +12,45 @@
 
 /* //navbar css */
 .navbar {
-  font-family: "Poppins", sans-serif;
+  /* padding: 1vmin 0 1vmin; */
+  font-family: Montserrat;
   font-size: 17px;
-  line-height: 26px;
+  /* line-height: 26px; */
   text-transform: uppercase;
   box-shadow: 0 8px 6px -6px gray;
   --webkit-box-shadow: 0 8px 6px -6px gray;
   border-bottom: solid gray !important;
+  background-color:  #000080;
+  
+ 
+}
+.navbar-nav{
+  margin-left:20vmin;
+
+  
 }
 
+#reg-btn{
+  margin-left: 15vmin;
+}
+#logo{
+  width: 10vmin;
+
+}
+.navbar-nav .nav-link.active {
+  color: white; /* Your desired color here */
+}
+.navbar-brand{
+  margin-left:5vmin;
+  color: #DBAD7E;
+}
+.navbar-nav .nav-link:hover {
+  color: white; /* Your desired hover color here */
+}
 .nav-link {
   font-weight: 300 !important;
+  color: #DBAD7E;
+  
 }
 
 .active {
@@ -141,4 +170,35 @@
   background-color: #434343 !important;
   color: white;
   padding: 20px 0px;
+}
+
+/* Product Details */
+
+#product-h{
+  margin-left: 40vmin;
+  margin-top: 5vmin;
+}
+.span-bold{
+  font-weight: 800;
+}
+.product-info{
+  color: #000;
+text-align: justify;
+font-family: Montserrat;
+font-size: 36%;
+font-style: normal;
+font-weight: 600;
+line-height: 59px; /* 163.889% */
+}
+#orders-h{
+  text-transform: uppercase;
+  font-family: Montserrat;
+  
+}
+
+#product-d{
+  font-size:2vmin;
+}
+.product-t{
+  font-weight: 800;
 }

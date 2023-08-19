@@ -149,9 +149,9 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-        <div className="col-md-9 ">
-          <h1 className="text-center">All Products</h1>
-          <div className="d-flex flex-wrap">
+        <div id="products-m" className="col-md-9">
+          <h1 id="products-h" className="text-center">All Products</h1>
+          <div id="prouducts-i" className="d-flex flex-wrap">
             {products?.map((p) => (
               <div className="card m-2" key={p._id}>
                 <img

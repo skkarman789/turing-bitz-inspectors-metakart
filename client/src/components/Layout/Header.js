@@ -5,9 +5,10 @@ import toast from "react-hot-toast";
 import SearchInput from "../Form/SearchInput";
 import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
-
-import logo from '../../assets/logo.png';
 import { Badge } from "antd";
+import logo from '../../assets/logo.png';
+// import cart from '../../assets/cart.png';
+import Cart from "../../assets/Cart.png";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -24,7 +25,7 @@ const Header = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <nav style={{height: 80, alignContent:'center', paddingTop: 20}} id="navbar" className="navbar navbar-expand-lg  bg-custom-color fixed-top">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -39,10 +40,10 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-              🛒 MetaKart
+            <img style={{width: 100, height: 50, marginTop: -10}}id="logo" src={logo} alt='flipCoin' />
             </Link>
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <SearchInput />
+            <ul className="navbar-nav mb-2 mb-lg-0">
+              
               <li className="nav-item">
                 <NavLink to="/" className="nav-link ">
                   Home
@@ -53,7 +54,7 @@ const Header = () => {
                   FlipCoin
                 </NavLink>
               </li>
-              <li className="nav-item dropdown">
+              <li id="categories" className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
                   to={"/categories"}
@@ -79,11 +80,11 @@ const Header = () => {
                   ))}
                 </ul>
               </li>
-
+              <SearchInput />
               {!auth?.user ? (
                 <>
                   <li className="nav-item">
-                    <NavLink to="/register" className="nav-link">
+                    <NavLink id="reg-btn" to="/register" className="nav-link">
                       Register
                     </NavLink>
                   </li>
@@ -96,12 +97,12 @@ const Header = () => {
               ) : (
                 <>
                   <li className="nav-item dropdown">
-                    <NavLink
+                    <NavLink 
                       className="nav-link dropdown-toggle"
                       href="#"
                       role="button"
                       data-bs-toggle="dropdown"
-                      style={{ border: "none" }}
+                      style={{ border: "none", marginLeft: 10 }}
                     >
                       {auth?.user?.name}
                     </NavLink>
@@ -130,9 +131,10 @@ const Header = () => {
                 </>
               )}
               <li className="nav-item">
-                <NavLink to="/cart" className="nav-link">
-                  <Badge count={cart?.length} showZero offset={[10, -5]}>
-                    Cart
+                <NavLink  style={{ marginLeft: 10 }} id="cart-img" to="/cart" className="nav-link">
+                  <Badge style={{margin: 5, marginRight: 5, marginTop: -5}} count={cart?.length} showZero offset={[10, -5]}>
+                    <img style={{width: 50, height: 40, marginTop: -5}} src={Cart} alt="cart"/>
+                    {/* <img id="logo" src={logo} alt='flipCoin' /> */}
                   </Badge>
                 </NavLink>
               </li>

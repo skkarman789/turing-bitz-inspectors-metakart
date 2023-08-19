@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 .banner-img {
   margin-top: 60px;
 }
@@ -48,10 +50,33 @@
 /* ==================
 filters
 ============== */
+.filters{
+  width: 40vmin;
+  background-color: #63a1ec;
+  text-transform:uppercase;
+  padding-left:6vmin;
+  padding-right: 10vmin;
+  
+}
+
+.filters .btn{
+  
+  background-color: #1a3f6d;
+  border-radius: 5%;
+  
+}
 .filters h4 {
-  margin-top: 100px;
-  color: gray !important;
+  font-size: 2vmin;
+  padding-top: 10%;
+  color: rgb(255, 255, 255) !important;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-weight: 600;
   border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+  
+}
+.filters h4:nth-child(1){
+  margin-top: 14vmin;
 }
 
 .ant-checkbox-wrapper:first-of-type {
@@ -80,6 +105,22 @@ filters
   font-size: 20px !important;
 }
 
-.flex-wrap{
-  margin-right: 20px !important;
+#products-m{
+  margin-left: 10vmin ;
 }
+
+#products-h{
+  text-transform:uppercase;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-weight: 800;
+  color:rgb(0, 0, 0);
+  margin-top: 4vmin;
+  margin-bottom: 4vmin;
+  text-decoration: underline;
+}
+#prouducts-i{
+  margin-left: 6vmin;
+  gap:5vmin;
+}
+

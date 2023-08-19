@@ -79,9 +79,9 @@ const CartPage = () => {
   };
   return (
     <Layout>
-      <div className=" cart-page">
+      <div className=" cart-page" /**style={{backgroundColor: '#d8f9ff'}}**/>
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-12" >
             <h1 className="text-center bg-light p-2 mb-1">
               {!auth?.user
                 ? "Hello Guest"
@@ -98,10 +98,10 @@ const CartPage = () => {
         </div>
         <div className="container ">
           <div className="row ">
-            <div className="col-md-7  p-0 m-0">
+            <div className="col-md-7  p-3 m-0">
               {cart?.map((p) => (
-                <div className="row card flex-row" key={p._id}>
-                  <div className="col-md-4">
+                <div className="row card flex-row " key={p._id}>
+                  <div className="col-md-3">
                     <img
                       src={`/api/v1/product/product-photo/${p._id}`}
                       className="card-img-top"
@@ -110,10 +110,11 @@ const CartPage = () => {
                       height={"130px"}
                     />
                   </div>
-                  <div className="col-md-4">
-                    <p>{p.name}</p>
-                    <p>{p.description.substring(0, 100)}</p>
-                    <p>Price : ₹{p.price}</p>
+                  <div className="col-md-7">
+                    <p><b>Product Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;:</b> &nbsp;{p.name}</p>
+                    <p><b>Product Description &nbsp;:&nbsp;&nbsp;</b>{p.description}</p>
+                    
+                    <p><b>Price &nbsp;:</b> &nbsp;₹{p.price}</p>
                   </div>
                   <div className="col-md-4 cart-remove-btn">
                     <button
@@ -134,8 +135,8 @@ const CartPage = () => {
               {auth?.user?.address ? (
                 <>
                   <div className="mb-3">
-                    <h4>Current Address</h4>
-                    <h5>{auth?.user?.address}</h5>
+                    <h4>Current Address :&nbsp;{auth?.user?.address}</h4>
+                    <h5></h5>
                     <button
                       className="btn btn-outline-warning"
                       onClick={() => navigate("/dashboard/user/profile")}
@@ -147,7 +148,7 @@ const CartPage = () => {
               ) : (
                 <div className="mb-3">
                   {auth?.token ? (
-                    <button
+                    <button 
                       className="btn btn-outline-warning"
                       onClick={() => navigate("/dashboard/user/profile")}
                     >

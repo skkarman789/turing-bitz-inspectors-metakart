@@ -32,13 +32,13 @@ const Orders = () => {
   }, [auth?.token]);
   return (
     <Layout title={"Your Orders"}>
-      <div className="container-flui p-3 m-5 l-6 dashboard">
+      <div className="container-flui p-3 m-3 dashboard">
         <div className="row">
           <div className="col-md-3">
             <UserMenu />
           </div>
           <div className="col-md-9">
-            <h1 className="text-center">All Orders</h1>
+            <h1 id="orders-h" className="text-center">All Orders</h1>
             {orders?.map((o, i) => {
               return (
                 <div className="border shadow">
@@ -70,16 +70,18 @@ const Orders = () => {
                         <div className="col-md-4">
                           <img
                             src={`/api/v1/product/product-photo/${p._id}`}
-                            className="card-img-top"
+                            // className="card-img-top"
                             alt={p.name}
-                            width="50px"
+                            width="70%"
                             // height="auto" 
                           />
                         </div>
-                        <div className="col-md-8">
-                          <p>{p.name}</p>
-                          <p>{p.description.substring(0, 30)}</p>
-                          <p>Price : ₹{p.price}</p>
+                        <div id="product-d" className="col-md-8">
+                        <p></p>
+                          <p><span className="product-t">Name</span> : {p.name}</p>
+                          <p><span className="product-t">Description</span> : {p.description}</p>
+                          <p><span className="product-t">Price</span> : ₹{p.price}</p>
+                          {/* <p>Catgory: {p.category}</p> */}
                           <Box style={{margin:'20%'}}>
                             <Instagram/>
                             <Facebook/>
