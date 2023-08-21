@@ -5,16 +5,22 @@
     padding-left: 4vmin;
 }
 #logo{
-    height: 13vmin;
-    margin-top: 6vmin;
-    width: 25vmin;
+    height: 10vmin;
+    margin-top: 10vmin;
+    width: 20vmin;
     margin-left: 8vmin;
 }
 #social{
-   margin-top: 5vmin;
+   margin-top: 4vmin;
     gap: 3vmin;
-   
 }
+
+#locate{
+    margin-top: 5%;
+    font-size: 24px;
+    color: #DBAD7E;
+}
+
 
 /* .logo{
     gap:1rem;
@@ -40,28 +46,33 @@ a{
     display: inline-block;
 }
 #locate-p{
-    margin-top: 6vmin;
+    margin-top: 2vmin;
 }
 #profile-item{
-    margin-top: 4vmin;
+    margin-top: 2vmin;
     margin-left: 4vmin;   
  
 }
 #profile{
-    margin-left: 4vmin;    
+    margin-left: 4vmin;
+    margin-top: 5%;
+    font-size: 24px;
+    color: #DBAD7E;
 }
 #action-m{
     display: flex;
     justify-content: center;
     margin-top: 4vmin;
-    margin-bottom:2vmin;
+    margin-bottom:-1vmin;
+    color: #DBAD7E;
 }
 #action{
   
     display: flex;
     justify-content: center;
-    gap: 2vmin;
-    margin-bottom:2vmin
+    gap: 2.5vmin;
+    margin-bottom:2vmin;
+    margin-top: 2vmin;
 }
 h4{
     font-size: 18px;
@@ -80,4 +91,3 @@ h2{
 .col-lg-4{
     padding-left: 60px;
 }
-

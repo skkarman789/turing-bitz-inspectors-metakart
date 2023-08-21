@@ -3,12 +3,14 @@ import Layout from "./../components/Layout/Layout";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/ProductDetailsStyles.css";
+import toast from "react-hot-toast";
 
 const ProductDetails = () => {
   const params = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState({});
   const [relatedProducts, setRelatedProducts] = useState([]);
+  const [cart, setCart] = useState([]);
 
   //initalp details
   useEffect(() => {
@@ -40,7 +42,7 @@ const ProductDetails = () => {
   return (
     <Layout>
       <div className="row container product-details">
-        <div className="col-md-6">
+        <div className="col-md-5">
           <img id="products-d"
             src={`/api/v1/product/product-photo/${product._id}`}
             className="card-img-top"
@@ -49,27 +51,36 @@ const ProductDetails = () => {
             
           />
         </div>
-        <div id="product-details" className="col-md-6">
+        <div id="product-details" className="col-md-5">
           <h1 id="product-h">Product Details</h1>
-          <div className="product-info">
-            <h6><span class="span-bold">Name</span> : {product.name}</h6>
-            <h6><span class="span-bold">Description</span> : {product.description}</h6>
+          <div id="product-info" className="product-info">
+            <h6><span class="span-bold">Name</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;{product.name}</h6>
+            <h6 id="desc-margin"><span class="span-bold">Description</span> &nbsp;&nbsp;&nbsp; &nbsp;: <h6 id="desc-h6">{product.description}</h6></h6>
             <h6>
-              <span class="span-bold">Price</span> :
-              {product?.price?.toLocaleString("en-US", {
+              <span class="span-bold">Price</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+              &nbsp;&nbsp;{product?.price?.toLocaleString("en-US", {
                 style: "currency",
                 currency: "INR",
               })}
             </h6>
-            <h6><span class="span-bold">Category</span> : {product?.category?.name}</h6>
-            <button class="btn btn-secondary ms-1">ADD TO CART</button>
+            <h6><span class="span-bold">Category</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;{product?.category?.name}</h6>
+            <button class="btn btn-secondary ms-1" 
+              // onClick={() => {
+              //   navigate()
+              //   // localStorage.setItem(
+              //   //   "cart",
+              //   //   JSON.stringify([product])
+              //   // );
+              //   // toast.success("Item Added to cart");
+              // }}
+              >ADD TO CART</button>
           </div>
 
         </div>
       </div>
       <hr />
       <div className="row container similar-products">
-        <h4>Similar Products ➡️</h4>
+        <h4>Similar Products ➡</h4>
         {relatedProducts.length < 1 && (
           <p className="text-center">No Similar Products found</p>
         )}

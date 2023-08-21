@@ -1,8 +1,9 @@
 import express from 'express';
-import { isAdmin, requireSignIn } from '../middlewares/authMiddleware';
-import { getUserData, postUserData } from '../controllers/userDataController';
+import { getUserData, postUserData } from '../controllers/userDataController.js';
 
 const router = express.Router();
+
 router.get('/getdata', getUserData);
 router.post('/', postUserData);
+
 export default router;

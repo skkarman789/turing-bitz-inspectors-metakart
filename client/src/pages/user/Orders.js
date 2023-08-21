@@ -5,15 +5,17 @@ import axios from "axios";
 import { useAuth } from "../../context/auth";
 import moment from "moment";
 import "../../styles/ProductDetailsStyles.css";
-import {Instagram} from '@mui/icons-material';
-import {Facebook} from '@mui/icons-material';
-import {Twitter} from '@mui/icons-material';
-import {Box, styled} from '@mui/material';
-
-// const Icons = styled(Box)`
-//   margin-left=100px;
-
-// `
+import { Instagram } from "@mui/icons-material";
+import { Facebook } from "@mui/icons-material";
+import { Twitter } from "@mui/icons-material";
+import { Box, styled } from "@mui/material";
+import {
+  FacebookShareButton,
+  InstapaperShareButton,
+  LineShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from "react-share";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -38,7 +40,9 @@ const Orders = () => {
             <UserMenu />
           </div>
           <div className="col-md-9">
-            <h1 id="orders-h" className="text-center">All Orders</h1>
+            <h1 id="orders-h" className="text-center">
+              All Orders
+            </h1>
             {orders?.map((o, i) => {
               return (
                 <div className="border shadow">
@@ -64,31 +68,81 @@ const Orders = () => {
                       </tr>
                     </tbody>
                   </table>
-                  <div className="container">
+                  <div className="container" id="box-user">
                     {o?.products?.map((p, i) => (
-                      <div className="row mb-2 p-3 card flex-row" key={p._id}>
+                      <div className="row  mb-2 p-3 card flex-row" key={p._id}>
                         <div className="col-md-4">
                           <img
                             src={`/api/v1/product/product-photo/${p._id}`}
-                            // className="card-img-top"
+                            className="card-img-top"
                             alt={p.name}
                             width="70%"
-                            // height="auto" 
+                            // height="auto"
                           />
                         </div>
                         <div id="product-d" className="col-md-8">
-                        <p></p>
-                          <p><span className="product-t">Name</span> : {p.name}</p>
-                          <p><span className="product-t">Description</span> : {p.description}</p>
-                          <p><span className="product-t">Price</span> : ₹{p.price}</p>
-                          {/* <p>Catgory: {p.category}</p> */}
-                          <Box style={{margin:'20%'}}>
-                            <Instagram/>
-                            <Facebook/>
-                            <Twitter/>
+                          <p></p>
+                          <p>
+                            <span className="product-t">Name</span> : {p.name}
+                          </p>
+                          <p>
+                            <span className="product-t">Description</span> :{" "}
+                            {p.description}
+                          </p>
+                          <p>
+                            <span className="product-t">Price</span> : ₹
+                            {p.price}
+                          </p>
 
+                          <Box
+                            style={{
+                              display: "flex",
+                              justifyContent: "flex",
+                              paddingRight: "20px",
+                              marginTop: "28%",
+                              marginRight: "80%",
+                              margin: "0%",
+                            }}
+                          >
+                            <InstapaperShareButton
+                              url="https://www.flipkart.com/"
+                              quote="ajhca"
+                              hashtag="#flipkart"
+                            >
+                              <Instagram
+                                style={{
+                                  fontSize: "36px", // Adjust the icon size as needed
+                                  marginRight: "20px", // Adjust as needed for spacing between icons
+                                  cursor: "pointer", // Add a pointer cursor for better UX
+                                }}
+                              />
+                            </InstapaperShareButton>
+                            <FacebookShareButton
+                              url="https://www.flipkart.com/"
+                              quote="ajhca"
+                              hashtag="#flipkart"
+                            >
+                              <Facebook
+                                style={{
+                                  fontSize: "36px", // Adjust the icon size as needed
+                                  marginRight: "20px", // Adjust as needed for spacing between icons
+                                  cursor: "pointer", // Add a pointer cursor for better UX
+                                }}
+                              />
+                            </FacebookShareButton>
+                            <TwitterShareButton
+                              url="https://www.flipkart.com/"
+                              quote="ajhca"
+                              hashtag="#flipkart"
+                            >
+                              <Twitter
+                                style={{
+                                  fontSize: "36px", // Adjust the icon size as needed
+                                  cursor: "pointer", // Add a pointer cursor for better UX
+                                }}
+                              />
+                            </TwitterShareButton>
                           </Box>
-
                         </div>
                       </div>
                     ))}

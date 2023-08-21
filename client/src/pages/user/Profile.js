@@ -59,7 +59,7 @@ const Profile = () => {
           <div className="col-md-8">
             <div className="form-container" style={{ marginTop: "-40px" }}>
               <form onSubmit={handleSubmit}>
-                <h4 className="title">USER PROFILE</h4>
+                <h3 className="title">USER PROFILE</h3>
                 <div className="mb-3">
                   <input
                     type="text"

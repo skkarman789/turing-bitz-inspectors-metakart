@@ -7,10 +7,9 @@ import { useAuth } from "../../context/auth";
 import moment from "moment";
 import { Select } from "antd";
 
+import "../../styles/ProductDetailsStyles.css";
 
 const { Option } = Select;
-
-
 
 const AdminOrders = () => {
   const [status, setStatus] = useState([
@@ -46,6 +45,7 @@ const AdminOrders = () => {
       console.log(error);
     }
   };
+
   return (
     <Layout title={"All Orders Data"}>
       <div className="container-fluid m-3 p-3 dashboard ">
@@ -54,7 +54,9 @@ const AdminOrders = () => {
             <AdminMenu />
           </div>
           <div className="col-md-9">
-            <h1 className="text-center">All Orders</h1>
+            <h1 id="orders-h" className="text-center">
+              All Orders
+            </h1>
             {orders?.map((o, i) => {
               return (
                 <div className="border shadow">
@@ -97,17 +99,33 @@ const AdminOrders = () => {
                       <div className="row mb-2 p-3 card flex-row" key={p._id}>
                         <div className="col-md-4">
                           <img
+                            id="product-image"
                             src={`/api/v1/product/product-photo/${p._id}`}
                             className="card-img-top"
                             alt={p.name}
-                            width="100"
-                            // height="80%"
+                            width="70%"
+                            // height="auto"
                           />
                         </div>
-                        <div className="col-md-8">
+                        {/* <div className="col-md-8">
                           <p>{p.name}</p>
                           <p>{p.description.substring(0, 30)}</p>
                           <p>Price : ₹{p.price}</p>
+                        </div> */}
+                        <div id="product-d" className="col-md-8">
+                          <p></p>
+                          <p>
+                            <span className="product-t">Name</span> : {p.name}
+                          </p>
+                          <p>
+                            <span className="product-t">Description</span> :{" "}
+                            {p.description}
+                          </p>
+                          <p>
+                            <span className="product-t">Price</span> : ₹
+                            {p.price}
+                          </p>
+                          {/* <p>Catgory: {p.category}</p> */}
                         </div>
                       </div>
                     ))}
@@ -116,9 +134,8 @@ const AdminOrders = () => {
               );
             })}
           </div>
+        </div>
       </div>
-      </div>
-      
     </Layout>
   );
 };

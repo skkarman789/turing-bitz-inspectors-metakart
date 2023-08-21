@@ -18,6 +18,12 @@ const UserMenu = () => {
           >
             Orders
           </NavLink>
+          <NavLink
+            to="/dashboard/user/usershare"
+            className="list-group-item list-group-item-action"
+          >
+            Social Media Interaction
+          </NavLink>
         </div>
       </div>
     </div>

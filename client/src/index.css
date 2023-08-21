@@ -1,3 +1,6 @@
+
+
+/* jhb */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -7,8 +10,6 @@
   box-sizing: border-box;
 }
 
-/* font-family: 'Poppins', sans-serif; */
-/* font-family: 'Playfair Display', serif; */
 
 /* //navbar css */
 .navbar {
@@ -17,24 +18,30 @@
   font-size: 17px;
   /* line-height: 26px; */
   text-transform: uppercase;
-  box-shadow: 0 8px 6px -6px gray;
-  --webkit-box-shadow: 0 8px 6px -6px gray;
+    /* box-shadow: 0 10px 7px -6px gray; */
   border-bottom: solid gray !important;
-  background-color:  #000080;
-  
+  background-color:  #2B3467;
+
  
 }
 .navbar-nav{
-  margin-left:20vmin;
+  margin-left:8vmin;
 
   
 }
 
-#reg-btn{
-  margin-left: 5vmin;
+.nav-item{
+  /* padding:0%; */
+
+  margin-top: 0.7%;
 }
+
+/* #reg-btn{
+  margin-left: 20vmin;
+} */
 #logo{
   width: 10vmin;
+
 
 }
 .navbar-nav .nav-link.active {
@@ -42,15 +49,14 @@
 }
 .navbar-brand{
   margin-left:5vmin;
-  color: #DBAD7E;
+  color: #DBAD7E;;
 }
 .navbar-nav .nav-link:hover {
   color: white; /* Your desired hover color here */
 }
 .nav-link {
-  font-weight: 600;
-  color: #DBAD7E;
-  
+  font-weight: 500 !important;
+  color: #DBAD7E;;
 }
 
 .active {
@@ -62,19 +68,36 @@
   font-family: "roboto", sans-serif;
   letter-spacing: 3px;
 }
-
+#div-form-search {
+  margin-right: 10%;
+  margin-left: 10%;
+}
 .search-form {
-  margin-right: 10px;
+  /* margin-right: 10px; */
   margin-top: 4px;
 }
 .search-form input {
   border: none;
-  border-radius: 0;
+  border-radius: 2px !important;
 }
 .search-form button {
-  background-color: #000000;
-  border-radius: 0;
-  color: white;
+  background-color: #dbad7e;
+  border-color: #084177;
+  border-radius: 2px;
+  color: #084177;
+  font-weight: 500;
+  margin-top: 0.8%;
+  margin-left: 41vmin;
+}
+
+.search-form button:hover{
+  background-color: #F5EFE7;
+  color: #084177;
+}
+
+.btn-outline-success {
+  --bs-btn-active-bg: #F5EFE7;
+  
 }
 
 /* =============================
@@ -175,12 +198,13 @@
 /* Product Details */
 
 #product-h{
-  margin-left: 40vmin;
-  margin-top: 5vmin;
+  margin-left: 15vmin;
+  margin-top: 1vmin;
 
 }
 .span-bold{
   font-weight: 800;
+  width: 100;
 }
 .product-info{
   color: #000;
@@ -188,9 +212,35 @@ text-align: justify;
 font-family: Montserrat;
 font-size: 36%;
 font-style: normal;
+margin-top: 20vmin;
+/* width: 50vmin; */
+margin-left: 20vmin;
 font-weight: 600;
+/* margin-left:  !important; */
 line-height: 59px; /* 163.889% */
 }
+
+#product-info{
+  /* margin-left: 30%;
+  margin-top: 10%; */
+  margin: 0%;
+
+  margin-top: 12%;
+}
+
+#desc-h6{
+  margin-left: -10%;
+  margin-top: -4%;
+  padding-left: 40%;
+  
+
+
+}
+
+#desc-margin{
+  margin-left:auto;
+}
+
 #orders-h{
   text-transform: uppercase;
   font-family: Montserrat;
@@ -199,6 +249,7 @@ line-height: 59px; /* 163.889% */
 
 #product-d{
   font-size:2vmin;
+
 }
 .product-t{
   font-weight: 800;
@@ -219,22 +270,24 @@ line-height: 59px; /* 163.889% */
 
 #cart-b{
   margin-bottom: 2vmin;
+  
 }
 
 #cart-banner{
   padding-top: 2vmin;
-  background-color: #DBAD7E ;
+  background-color: #CAE4DB;
 }
 
 #cart-update{
   margin-bottom: 2vmin;
- margin-right: 2vmin;
+  margin-right: 2vmin;
 }
 
 #cart-main{
   margin-bottom: 13vmin;
 
 }
+
 
 #cart-main-child{
   width: 60%;
@@ -243,10 +296,10 @@ line-height: 59px; /* 163.889% */
   border-radius: 1.5%;
 }
 #cart-summary-div{
-  box-sizing: border-box;
-  background-color: #807edb;
-  width: 50vmin;
-  height: 60vmin;
+  /* box-sizing: border-box; */
+  background-color: #fbfbfb;
+  width: 60vmin;
+  height: auto ;
   border-radius: 3vmin;
   margin-left: 12vmin;
   margin-top: 2vmin;
@@ -266,7 +319,7 @@ line-height: 59px; /* 163.889% */
 #cart-summary-div p{
   margin-top: -4%;
   text-transform: uppercase;
-  color: white;
+  color: black;
   font-size: 1.5vmin;
   
   
@@ -274,8 +327,9 @@ line-height: 59px; /* 163.889% */
 
 #cart-main-child{
   height: 40vmin;
-  border: 2px solid black;
+  border: 1px solid gray;
   width:100vmin;
+  border-radius: 1vmin;
   
 }
 
@@ -317,16 +371,17 @@ text-align: justify;
   border-radius: 5%;
   width: 60vmin;
   z-index: 99;
+  
 }
 
 #admin-box{
-  width: 60vmin;
-  height: 40vmin;
+  width: 65vmin;
+  height: 51vmin;
   position: absolute;
-top:25vmin;
-left: 90vmin;
-
-  background-color: rgb(166, 255, 0);
+  top:25vmin;
+  left: 90vmin;
+  border-radius: 10px;
+  background-color: #C5DFF8;
 }
 
 #admin-info p{
@@ -341,16 +396,98 @@ left: 90vmin;
   font-size: 3vmin;
   border: 1px black;
 }
-.product-info{
-  margin-top: 20vmin;
-  width: 50vmin;
-  margin-left: 20vmin;
-  
-}
+
 
 .span-bold{
   font-size: 2.5vmin;
 }
 #products-d{
   width: 40vmin;
+  margin-top: 8% !important;
+}
+
+
+#user-image{
+  width: 20vmin;
+  justify-content: center;
+  margin-left: 17vmin;
+  z-index: 99;
+}
+
+#user-info{
+  margin-left: 20vmin;
+  border-radius: 5%;
+  width: 60vmin;
+  z-index: 99;
+  
+}
+
+#user-box{
+  width: 65vmin;
+  height: 51vmin;
+  position: absolute;
+  top:25vmin;
+  left: 90vmin;
+  border-radius: 10px;
+  background-color: #C5DFF8;
+}
+
+#user-info p{
+  margin-left: 22vmin;
+  text-transform: uppercase;
+  font-size: 3.5vmin;
+  font-weight: 700;
+  letter-spacing: 1vmin;
+  
+}
+#user-info h3{
+  font-size: 3vmin;
+  border: 1px black;
+}
+
+#mission{
+  margin-right: "60%" !important;
+}
+#box-user{
+  margin-top: -2%;
+  margin-bottom: 2%;
+
+}
+.dropdown-menu{ 
+  --bs-dropdown-link-active-bg: #DBAD7E; 
+  --bs-dropdown-link-active-color: black; 
+  --bs-dropdown-link-hover-bg: #DBAD7E; 
+} 
+.dropdown-menu.show { 
+background-color: white ; 
+padding: 0; 
+} 
+.dropdown-item { 
+border-radius:5px;
+}
+.usershare-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+#social-media{
+  margin:auto;
+}
+
+#social-form{
+  width:50%;
+  /* padding-top: 3%; */
+}
+
+#social-submit{
+  text-align: center;
+  /* padding-top: 3%; */
+  /* padding-bottom: 3%; */
 }

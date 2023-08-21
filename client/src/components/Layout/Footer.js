@@ -23,27 +23,40 @@ const Footer = () => {
                   <a href="#"><img src={LinkedIn} style={{ width:'50%', height: '100%'}} /></a>
                   <a href="#"><img src={Twitter} style={{ width:'70%', height: '100%'}} /></a> */}
 
-                  <a href="#"><RiGithubFill className="logo" style={{ fontSize: '5.65vmin'}} /></a>
-                  <a href="#"><RiLinkedinBoxFill className="logo" style={{ fontSize: '5.65vmin' }} /></a>
-                  <a href="#"><RiInstagramLine className="logo" style={{ fontSize: '5.65vmin' }} /></a>
-                  <a href="#"><RiTwitterLine className="logo" style={{ fontSize: '5.65vmin' }} /></a>
-                  <a href="#"><RiFacebookBoxFill className="logo" style={{ fontSize: '5.65vmin' }} /></a>
+                  <a href="#"><RiGithubFill className="logo" style={{ fontSize: '5vmin'}} /></a>
+                  <a href="#"><RiLinkedinBoxFill className="logo" style={{ fontSize: '5vmin' }} /></a>
+                  <a href="#"><RiInstagramLine className="logo" style={{ fontSize: '5vmin' }} /></a>
+                  <a href="#"><RiTwitterLine className="logo" style={{ fontSize: '5vmin' }} /></a>
+                  <a href="#"><RiFacebookBoxFill className="logo" style={{ fontSize: '5vmin' }} /></a>
               </div>
               </div>
                   
           
-          <div class="col-lg-4">
-              <h2>Locate Us</h2>
-              {/* <p id="locate-p"> Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
-                  Eius cupiditate cum assumenda corporis <br/>
-                    aspernatur vel voluptate odio nulla reiciendis? <br/>
-                  Facere ipsam dolor iure modi. Tempore laboriosam<br/>
-                  eius, dolorum quod id modi rerum!</p> */}
+              <div class="col-lg-4">
+        <h2 id="locate">LOCATE US</h2>
+        <p id="locate-p">
+          {" "}
+            Metakart Internet Private Limited,
+
+            Buildings Alyssa, Begonia &
+
+            Clove Embassy Tech Village,
+
+            Outer Ring Road, Devarabeesanahalli Village,
+
+            Bengaluru, 560103,
+
+            Karnataka, India
+
+            CIN : U51109KA2012PTC066107
+
+            Telephone: 044-45614700
+        </p>
 
                   
           </div>
           <div id="profile-m" className="col-lg-4">
-              <h2 id="profile">Profile</h2>
+              <h2 id="profile">PROFILE</h2>
               <div id="profile-item">          
                   <a href=""><RiUserLine className="logo" ></RiUserLine><h4 className="profile-icon">My Account</h4></a><br/>
                   <a href="" ><RiPaypalLine className="logo" ></RiPaypalLine><h4 className="profile-icon">Checkout</h4></a><br/>
@@ -66,5 +79,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-

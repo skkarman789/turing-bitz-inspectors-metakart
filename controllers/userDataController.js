@@ -1,4 +1,4 @@
-import userShare from '../models/userShare';
+import userShare from '../models/userShare.js';
 
 // @desc Get All User data
 // @route GET /api/v1/userdata/getdata

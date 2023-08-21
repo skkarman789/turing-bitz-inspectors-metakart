@@ -13,27 +13,17 @@ contract loyalty is ERC20{
     uint8 public minTokensRequired = 200 wei;
     address public admin;
 
-    enum ActivityType{
-        Purchases,
-        Referrals,
-        SocialMedia
+
+    struct FCMinted{
+        address  from;
+        address    to;
+        uint256  amount;
+        uint256  issueTime;
+        string   Activity;
     }
 
 
-    event FCMinted(
-        address  indexed to,
-        uint256  amount,
-        uint256  issueTime,
-        uint256  expiry,
-        ActivityType Activity
-        );
-
-    
-    event FCspent(
-        address indexed from,
-        uint256 amount,
-        uint256 issueTime
-        );
+    FCMinted[] fc;
 
     constructor() ERC20("FlipCoins", "FC") {
         admin=msg.sender;
@@ -64,15 +54,12 @@ contract loyalty is ERC20{
     return balanceOf(admin);
     }
 
-    function TFC(address recipient,uint256 amount, ActivityType Activity)
+    function TFC(address recipient,uint256 amount, string memory Activity)
         internal  
         onlyValidRecipient(recipient)
-        onlyPositiveAmount(amount)
     {
         _transfer(admin,recipient, amount);
-        uint256 isueTime = block.timestamp;
-        uint256 Expiry= isueTime.add(180 days);
-        emit FCMinted(recipient, amount,isueTime,Expiry,Activity);
+        fc.push(FCMinted(admin,recipient,amount,block.timestamp, Activity));
         emit Transfer(admin,recipient, amount);
     }
 
@@ -86,40 +73,61 @@ contract loyalty is ERC20{
         if (earnedTokens > maxTokensPerOrder) {
             earnedTokens = maxTokensPerOrder;
         }
-        TFC(recipient,earnedTokens,ActivityType.Purchases);
+        TFC(recipient,earnedTokens,"spendAndEarn");
     }
 
 
     function spend(address recipient,uint256 Amount) external  onlyPositiveAmount(Amount) onlyValidRecipient(recipient) {
-    uint256 maxFCPerOrder = 200 wei;
-    uint256 earnedTokens = Amount.div(10); // 10% discount 
+        uint256 maxFCPerOrder = 200 wei;
+        uint256 earnedTokens = Amount.div(10); 
 
-    if (earnedTokens > maxFCPerOrder) {
-        earnedTokens = maxFCPerOrder;
-    } 
-    if (earnedTokens > balanceOf(recipient)) {
-        earnedTokens = balanceOf(recipient);
+        if (earnedTokens > maxFCPerOrder) {
+            earnedTokens = maxFCPerOrder;
+        } 
+        if (earnedTokens > balanceOf(recipient)) {
+            earnedTokens = balanceOf(recipient);
+        }
+
+        _burn(recipient, earnedTokens); 
+        _mint(admin, earnedTokens);
+        emit Transfer(recipient,admin, earnedTokens);
+        fc.push(FCMinted(recipient,admin,earnedTokens, block.timestamp,"spend"));
     }
-
-    _burn(recipient, earnedTokens); 
-    _mint(admin, earnedTokens);
-    emit Transfer(recipient,admin, earnedTokens);
-    emit FCspent(recipient,Amount, block.timestamp);
-}
 
 
     function Referred (address recipient)
         external
         onlyValidRecipient(recipient){
-        TFC(recipient, 100 wei ,ActivityType.Referrals);
-
+        TFC(recipient, 100 wei ,"Referrals");
     }
 
 
     function SocialMediaInteraction (address recipient)
         onlyAdmin public
         onlyValidRecipient(recipient){
-            TFC(recipient,100 wei ,ActivityType.SocialMedia);
+            TFC(recipient,100 wei ,"SocialMedia");
 
+    }
+    function getfc() public view returns(FCMinted[] memory){
+        return fc;
+    }
+    function checkFc(address recipient,uint256 Amount) public  onlyPositiveAmount(Amount) onlyValidRecipient(recipient) view returns(uint256){
+        uint256 cc=0;
+            if(balanceOf(recipient)==0){
+                return cc;
+            }
+            else{
+                uint256 maxFCPerOrder = 200 wei;
+                uint256 earnedTokens = Amount.div(10);
+                if (earnedTokens > maxFCPerOrder) {
+                    cc = maxFCPerOrder;
+                } 
+                if (earnedTokens < maxFCPerOrder) {
+                    cc = earnedTokens;
+                } 
+                if (earnedTokens > balanceOf(recipient)) {
+                    cc = balanceOf(recipient);}
+            }
+        return cc;
     }
 }

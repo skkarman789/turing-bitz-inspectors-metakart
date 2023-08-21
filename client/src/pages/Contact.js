@@ -9,10 +9,10 @@ const Contact = () => {
           <img
             src="/images/contactus.jpeg"
             alt="contactus"
-            style={{ width: "100%" , marginTop: 60}}
+            style={{ width: "100%", marginTop: 60 }}
           />
         </div>
-        <div className="col-md-4" style={{marginTop: 20}}>
+        <div className="col-md-4" style={{ marginTop: 20 }}>
           <h1 className="bg-dark p-2 text-white text-center">CONTACT US</h1>
           <p className="text-justify mt-2">
             For any query and information about products feel free to contact

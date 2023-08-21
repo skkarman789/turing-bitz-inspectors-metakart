@@ -9,6 +9,8 @@ import { Badge } from "antd";
 import logo from '../../assets/logo.png';
 // import cart from '../../assets/cart.png';
 import Cart from "../../assets/Cart.png";
+import {AccountCircle} from '@mui/icons-material';
+
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -25,7 +27,11 @@ const Header = () => {
   };
   return (
     <>
-      <nav style={{height: 80, alignContent:'center', paddingTop: 15}} id="navbar" className="navbar navbar-expand-lg  bg-custom-color fixed-top">
+      <nav
+        style={{ height: 80, alignContent: "center", paddingTop: 20 }}
+        id="navbar"
+        className="navbar navbar-expand-lg  bg-custom-color fixed-top"
+      >
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -40,7 +46,7 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-            <img style={{width: 100, height: 50, marginTop: -10}}id="logo" src={logo} alt='flipCoin' />
+            <img style={{width: 100, height: 50, marginTop: -10, marginLeft: '1%'}}id="logo" src={logo} alt='flipCoin' />
             </Link>
             <ul className="navbar-nav mb-2 mb-lg-0">
               
@@ -49,6 +55,7 @@ const Header = () => {
                   Home
                 </NavLink>
               </li>
+              
               <li className="nav-item">
                 <NavLink to="/FlipCoin" className="nav-link ">
                   FlipCoin
@@ -78,8 +85,13 @@ const Header = () => {
                       </Link>
                     </li>
                   ))}
+
                 </ul>
               </li>
+              <li className="nav-item">
+                <NavLink to="/faq" className="nav-link ">
+                  Faqs
+                </NavLink></li>
               <SearchInput />
               {!auth?.user ? (
                 <>
@@ -131,13 +143,28 @@ const Header = () => {
                 </>
               )}
               <li className="nav-item">
-                <NavLink  style={{ marginLeft: 10 }} id="cart-img" to="/cart" className="nav-link">
-                  <Badge style={{margin: 5, marginRight: 5, marginTop: -5}} count={cart?.length} showZero offset={[10, -5]}>
-                    <img style={{width: 50, height: 40, marginTop: -5}} src={Cart} alt="cart"/>
+              <NavLink
+                  style={{ marginLeft: 10 }}
+                  id="cart-img"
+                  to="/cart"
+                  className="nav-link"
+                >
+                  <Badge
+                    style={{ margin: 5, marginRight: 5, marginTop: -5 }}
+                    count={cart?.length}
+                    showZero
+                    offset={[10, -5]}
+                  >
+                    <img
+                      style={{ width: 50, height: 40, marginTop: -5 }}
+                      src={Cart}
+                      alt="cart"
+                    />
                     {/* <img id="logo" src={logo} alt='flipCoin' /> */}
                   </Badge>
                 </NavLink>
               </li>
+              
             </ul>
           </div>
         </div>

@@ -6,7 +6,7 @@
   padding: 15px !important;
   font-family: "roboto", sans-serif;
   font-weight: normal;
-  background-color: #DBAD7E !important;
+  background-color: #CAE4DB !important;
 }
 .cart-page h1 > p {
   font-size: 20px;
@@ -35,6 +35,5 @@
 }
 #product-d{
   display: inline-block;
-  font-size: 2.1vmin;
-  
+  font-size:2.1vmin;
 }

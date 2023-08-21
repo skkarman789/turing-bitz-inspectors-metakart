@@ -31,17 +31,17 @@ const AdminMenu = () => {
             Orders
           </NavLink>
           <NavLink
+            to="/dashboard/admin/trackflipcoins"
+            className="list-group-item list-group-item-action"
+          >
+            Track Super Coins
+          </NavLink>
+          <NavLink
             to="/dashboard/admin/social-media"
             className="list-group-item list-group-item-action"
           >
-            Social Media
+            social-media
           </NavLink>
-          {/* <NavLink
-            to="/dashboard/admin/users"
-            className="list-group-item list-group-item-action"
-          >
-            Users
-          </NavLink> */}
         </div>
       </div>
     </>

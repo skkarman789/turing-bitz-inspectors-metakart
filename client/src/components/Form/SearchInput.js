@@ -21,7 +21,7 @@ const SearchInput = () => {
     }
   };
   return (
-    <div>
+    <div id="div-form-search">
       <form
         className="d-flex search-form"
         role="search"
@@ -29,9 +29,10 @@ const SearchInput = () => {
       >
         <input
           id="input-css"
+          style={{ backgroundColor: "#F5EFE7" }}
           className="form-control"
           type="search"
-          placeholder="Search"
+          placeholder="Search for products"
           aria-label="Search"
           value={values.keyword}
           onChange={(e) => setValues({ ...values, keyword: e.target.value })}

@@ -9,6 +9,7 @@ import Layout from "./../components/Layout/Layout";
 import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
 import FrontPage from "../assets/front-page.png";
+import Banner from "../components/Layout/Banner"
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -108,14 +109,9 @@ const HomePage = () => {
     }
   };
   return (
-    <Layout title={"ALl Products - Best offers "}>
+    <Layout title={"All Products - Best offers "}>
       {/* banner image */}
-      <img id="banner"
-        src={FrontPage}
-        className="banner-img"
-        alt="bannerimage"
-        width={"100%"}
-      />
+      <Banner />
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">
         <div className="col-md-3 filters">
@@ -151,7 +147,10 @@ const HomePage = () => {
           </div>
         </div>
         <div id="products-m" className="col-md-9">
-          <h1 id="products-h" className="text-center">All Products</h1>
+          <h1 id="products-h" className="text-center">
+            All Products
+          </h1>
+          <h3 id="products-h3">Shop Now</h3>
           <div id="prouducts-i" className="d-flex flex-wrap">
             {products?.map((p) => (
               <div className="card m-2" key={p._id}>
@@ -162,7 +161,7 @@ const HomePage = () => {
                 />
                 <div className="card-body">
                   <div className="card-name-price">
-                    <h5 className="card-title">{p.name.substring(0,60)}</h5>
+                    <h5 className="card-title">{p.name.substring(0, 60)}</h5>
                     <h5 className="card-title card-price">
                       {p.price.toLocaleString("en-US", {
                         style: "currency",
@@ -208,11 +207,11 @@ const HomePage = () => {
                 }}
               >
                 {loading ? (
-                  "Loading ..."
+                  "LOADING ..."
                 ) : (
                   <>
                     {" "}
-                    Loadmore <AiOutlineReload />
+                    LOAD MORE <AiOutlineReload />
                   </>
                 )}
               </button>

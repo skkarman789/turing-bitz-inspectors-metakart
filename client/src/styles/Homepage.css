@@ -17,6 +17,11 @@
   background-color: rgba(128, 128, 128, 0.097);
   width: 18rem;
 }
+
+.mt-3 {
+  margin-top: 0 !important;
+}
+
 .home-page .card-name-price {
   display: flex;
   flex-direction: row;
@@ -36,6 +41,11 @@
   font-weight: bold;
 }
 
+.btn-info {
+  background-color: #DBAD7E !important;
+  border-color: rgba(128, 128, 128, 0.097);
+}
+
 .home-page .card-text {
   color: rgb(90, 89, 89);
 }
@@ -52,7 +62,7 @@ filters
 ============== */
 .filters{
   width: 40vmin;
-  background-color: #63a1ec;
+  background-color: #CDAC81;
   text-transform:uppercase;
   padding-left:6vmin;
   padding-right: 10vmin;
@@ -60,49 +70,66 @@ filters
 }
 
 .filters .btn{
-  
-  background-color: #1a3f6d;
-  border-radius: 5%;
+  background-color: #2C3333;
+  border-radius: 2px;
   
 }
 .filters h4 {
-  font-size: 2vmin;
+  text-align: left !important;
+  margin-left: 5%;
+  font-size: 2.4vmin;
   padding-top: 10%;
   color: rgb(255, 255, 255) !important;
   font-weight: bold;
   font-family: Montserrat;
   font-weight: 600;
   border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+  width: 120%;
+  margin-bottom: 10%;
   
 }
 .filters h4:nth-child(1){
-  margin-top: 14vmin;
-}
-
-.ant-checkbox-wrapper:first-of-type {
-  margin-left: 8px;
+  margin-top: 5vmin;
 }
 
 .ant-checkbox-wrapper {
-  margin: 2px;
+  margin-left: 5% !important;
+  margin-bottom: 2%;
+  color: #2C3333;
+  font-weight: 500;
+  margin-bottom: 5%;
 }
+
+/* .ant-checkbox-wrapper {
+  margin: 2px;
+} */
 .ant-radio-wrapper {
-  margin-bottom: 5px !important;
-  margin-left: 10px;
+  margin-left: 5% !important;
+  margin-bottom: 2%;
+  color: #2C3333;
+  font-weight: 500;
+  width:100%;
+  margin-bottom: 5%;
 }
 
 .filters button {
-  background-color: black;
+  background-color: #2C3333;
   width: 100%;
+  font-size: 2vmin;
   border: none;
   border-radius: 0;
   margin-top: 20px;
+  letter-spacing: 1px;
 }
 
 .loadmore {
-  color: green;
+  margin-top: 5%;
+  margin-bottom: 2%;
   font-weight: bold;
-  font-size: 20px !important;
+  font-size: 16px !important;
+  border: 2px solid !important;
+  width: 25% !important;
+  margin-left: 36.5%;
 }
 
 #products-m{
@@ -111,16 +138,27 @@ filters
 
 #products-h{
   text-transform:uppercase;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-family: Montserrat;
-  font-weight: 800;
+  font-size: 36px;
+  font-weight: 500;
   color:rgb(0, 0, 0);
-  margin-top: 4vmin;
-  margin-bottom: 4vmin;
-  text-decoration: underline;
+  margin-top: -6vmin;
+  
+  /* margin-bottom: 6vmin; */
+  /* text-decoration: underline; */
+}
+
+#products-h3{
+  font-family: Montserrat;
+  margin-top: -2vmin;
+  margin-bottom: 6vmin;
+  /* text-transform:uppercase; */
+  text-align: center;
+  color:#DBAD7E;;
+  font-size: 26px;
 }
 #prouducts-i{
   margin-left: 6vmin;
   gap:5vmin;
 }
-
