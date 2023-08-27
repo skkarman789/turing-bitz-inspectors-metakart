@@ -45,7 +45,7 @@ const AdminOrders = () => {
       console.log(error);
     }
   };
-
+  
   return (
     <Layout title={"All Orders Data"}>
       <div className="container-fluid m-3 p-3 dashboard ">
@@ -57,7 +57,18 @@ const AdminOrders = () => {
             <h1 id="orders-h" className="text-center">
               All Orders
             </h1>
+
             {orders?.map((o, i) => {
+               let formattedDate = "Invalid Date";
+               try {
+                 const dateObject = new Date(o?.createdAt);
+                 if (!isNaN(dateObject.getTime())) {
+                   formattedDate = dateObject.toLocaleDateString();
+                 }
+               } catch (error) {
+                 console.error("Error formatting date:", error);
+               }
+ 
               return (
                 <div className="border shadow">
                   <table className="table">
@@ -66,7 +77,7 @@ const AdminOrders = () => {
                         <th scope="col">#</th>
                         <th scope="col">Status</th>
                         <th scope="col">Buyer</th>
-                        <th scope="col">Date</th>
+                        <th scope="col">&nbsp;&nbsp;&nbsp; Date</th>
                         <th scope="col">Payment</th>
                         <th scope="col">Quantity</th>
                       </tr>
@@ -88,7 +99,7 @@ const AdminOrders = () => {
                           </Select>
                         </td>
                         <td>{o?.buyer?.name}</td>
-                        <td>{moment(o?.createAt).fromNow()}</td>
+                        <td className="m-2">{formattedDate}</td>
                         <td>{o?.payment.success ? "Success" : "Failed"}</td>
                         <td>{o?.products?.length}</td>
                       </tr>
