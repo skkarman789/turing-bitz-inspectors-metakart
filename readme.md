@@ -1,4 +1,6 @@
-### `npm install `  in both client and server
 
+in both client and server
+### `npm install ` 
 
-### 'npm run dev 'in server
+ in server
+### ``npm run dev ``
